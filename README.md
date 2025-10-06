@@ -4,7 +4,10 @@
 KDE Neon
 Как использовать данный скрипт?
 
-    git clone https://github.com/DeminRDru/kde-neon-bash.git
-    cd kde-neon-bash
+    git clone https://github.com/DeminRDru/linux-bash.git
+    cd linux-bash
     chmod +x ./kde-neon.sh
     ./kde-neon.sh
+
+
+    

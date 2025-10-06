@@ -1,0 +1,46 @@
+sudo apt update
+sudo apt full-upgrade
+sudo apt full-upgrade -y
+sudo apt update && sudo apt full-upgrade -y
+sudo apt autoremove
+sudo apt remove plasma-discover-backend-snap
+
+sudo apt install -y kde-full
+
+sudo apt install -f
+
+
+sudo apt install -y neofetch htop btop samba samba-client git kitty helix 
+sudo apt install -y vim kdevelop qtcreator vscode zsh openssl
+sudo apt install -y krita gimp libreoffice 
+
+sudo apt install -y elisa vlc mpv haruna filezilla yakuake 
+
+sudo apt install -y network-manager-openvpn
+sudo apt install -y ktorrent 
+sudo apt install -y kmail
+sudo apt install -y kdenlive
+sudo apt install -y kmymoney
+sudo apt install -y skanpage
+sudo apt install -y steam
+
+sudo apt-get install telegram-desktop
+sudo apt-get install thunderbird
+
+
+
+
+
+
+sudo dpkg --add-architecture i386
+sudo mkdir -pm755 /etc/apt/keyrings
+sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
+
+Ubuntu 22.04
+sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources
+
+sudo apt update
+sudo apt install -y wine
+winecfg
+sudo apt install -y winetricks
+winetricks d3dx9

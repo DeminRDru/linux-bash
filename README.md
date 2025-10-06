@@ -6,7 +6,7 @@ KDE Neon
 
     git clone https://github.com/DeminRDru/linux-bash.git
     cd linux-bash
-    chmod +x ./kde-neon.sh
+    chmod +x ./linux-bash.sh
     ./kde-neon.sh
 
 

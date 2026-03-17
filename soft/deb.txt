@@ -1,29 +1,36 @@
-Команды для установки софты в 
+Команды в терминале для установки софта в дистрибутивах древа Debian, Ubuntu, а также и Asta linux (только софтв, а не репозитории. Репозитории отдельно + Debian) и Alt Linux
+в разработке на Github, но пока есть тут http://wiki.deminrd.ru
 
-
+====Обновление  дистрибутива====
 sudo apt update
 sudo apt full-upgrade
 sudo apt full-upgrade -y
 sudo apt update && sudo apt full-upgrade -y
 sudo apt autoremove
-sudo apt remove plasma-discover-backend-snap
-
-sudo apt install -y kde-full
 
 sudo apt install -f
+sudo apt remove plasma-discover-backend-snap
 
 
-sudo apt install -y neofetch htop btop samba samba-client git kitty helix 
-sudo apt install -y vim kdevelop qtcreator vscode zsh openssl
-sudo apt install -y krita gimp libreoffice 
-
-sudo apt install -y elisa vlc mpv haruna filezilla yakuake 
-
-sudo apt install -y network-manager-openvpn
+====KDE====
+sudo apt install -y krita
+sudo apt install -y elisa
+sudo apt install -y haruna
 sudo apt install -y ktorrent 
 sudo apt install -y kmail
 sudo apt install -y kdenlive
 sudo apt install -y kmymoney
+sudo apt install -y yakuake
+sudo apt install -y kdevelop
+или 
+sudo apt install -y kde-full
+
+====   ====
+sudo apt install -y neofetch htop btop samba samba-client git kitty helix 
+sudo apt install -y vim qtcreator vscode zsh openssl
+sudo apt install -y gimp libreoffice 
+sudo apt install -y vlc mpv filezilla  
+sudo apt install -y network-manager-openvpn
 sudo apt install -y skanpage
 sudo apt install -y steam
 
@@ -32,18 +39,28 @@ sudo apt-get install thunderbird
 
 
 
-
-
-
+====wine====
+cat /etc/os-release
 sudo dpkg --add-architecture i386
 sudo mkdir -pm755 /etc/apt/keyrings
+wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo gpg --dearmor -o /etc/apt/keyrings/winehq-archive.key -
 sudo wget -O /etc/apt/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
 
+
+Ubuntu 25.10
+sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/questing/winehq-questing.sources
+Ubuntu 24.04
+sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/noble/winehq-noble.sources
 Ubuntu 22.04
 sudo wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources
 
 sudo apt update
-sudo apt install -y wine
-winecfg
+Install Wine
+Stable branch - sudo apt install --install-recommends winehq-stable или sudo apt install -y wine
+Development branch - sudo apt install --install-recommends winehq-devel
+Staging branch - sudo apt install --install-recommends winehq-staging
+
 sudo apt install -y winetricks
 winetricks d3dx9
+
+winecfg
